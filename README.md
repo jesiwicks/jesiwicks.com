@@ -36,3 +36,5 @@ Each guide is a self-contained reference for a specific AI video model — how i
 ## About
 
 Made by [Jessica Wicks Kelly](https://jesiwicks.com) — AI education for creators.
+
+Last verified: April 2026
