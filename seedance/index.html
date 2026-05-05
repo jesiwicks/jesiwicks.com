@@ -1,1 +1,117 @@
-PLACEHOLDER_SEE_NEXT_ATTEMPT
+      <div class="cheat-row"><span class="cheat-key">Clips &gt; 15 seconds</span><span class="cheat-val">→ Kling 3.0 (up to 3 min)</span></div>
+    </div>
+  </div>
+  <button type="button" class="cheat-toggle" onclick="toggleCheat()" aria-label="Toggle cheat sheet panel" aria-expanded="false" aria-controls="cheatPanel">
+    <span class="cheat-toggle-icon">⚡</span>
+    <span id="cheatLabel">Cheat Sheet</span>
+  </button>
+</div>
+<!-- ═══════════════════════════════════════════════════
+     PRINT-ONLY CHEAT SHEET (for PDF)
+════════════════════════════════════════════════════ -->
+<div class="print-cheatsheet" style="display:none;" id="printSheet">
+  <div style="display:flex;align-items:baseline;justify-content:space-between;border-bottom:2px solid #0A0A0F;padding-bottom:0.35rem;margin-bottom:0.6rem;">
+    <div>
+      <div style="font-size:0.72rem;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:#000000;margin-bottom:0.1rem;">JESIWICKS · AI Video Guides</div>
+      <div style="font-size:1.25rem;font-weight:900;letter-spacing:-0.02em;color:#000000;">Seedance 2.0 - Cheat Sheet</div>
+    </div>
+    <div style="font-size:0.72rem;color:#000000;">jesiwicks.com/seedance</div>
+  </div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.75rem;">
+    <div>
+      <div style="font-size:0.68rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:#000000;border-bottom:1px solid #ddd;padding-bottom:0.25rem;margin-bottom:0.35rem;">INPUT LIMITS</div>
+      <div class="label-body">Images: ≤ 9 files<br>Video: ≤ 3 clips · 15s total<br>Audio (MP3): ≤ 3 · 15s total<br>Total files: 12 max<br>Output: 4–15 seconds · 2K max<br>Prompt: ≤ 80 words</div>
+      <div style="font-size:0.68rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:#000000;border-bottom:1px solid #ddd;padding-bottom:0.25rem;margin-bottom:0.35rem;margin-top:0.45rem;">PROMPT FORMULA</div>
+      <div style="font-size:0.82rem;line-height:1.6;color:#000000;border:1px solid #000000;background:#fff;padding:0.4rem 0.6rem;border-radius:4px;">Subject + Action + Scene + Camera + Style<br>One camera move per prompt. Always.<br>Replace text with @tag + role when you have a reference.</div>
+      <div style="font-size:0.68rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:#000000;border-bottom:1px solid #ddd;padding-bottom:0.25rem;margin-bottom:0.35rem;margin-top:0.45rem;">@ TAG PATTERNS</div>
+      <div style="font-size:0.82rem;line-height:1.6;color:#000000;font-family:monospace;">@Image1 as the character<br>Replicate camera movement from @Video1<br>@Image1 as the first frame<br>Background music refers to @Audio1<br>Extend @Video1 by 5s</div>
+      <div style="font-size:0.68rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:#000000;border-bottom:1px solid #ddd;padding-bottom:0.25rem;margin-bottom:0.35rem;margin-top:0.45rem;">FAST VS STANDARD</div>
+      <div class="label-body">Use Fast for all drafts (half cost, 2× speed)<br>Switch to Standard for final render only<br>Same capabilities across both variants</div>
+    </div>
+    <div>
+      <div style="font-size:0.68rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:#000000;border-bottom:1px solid #ddd;padding-bottom:0.25rem;margin-bottom:0.35rem;">NEVER DO THESE</div>
+      <div class="label-body-alt">✗ Stack camera movements (pan + zoom + track)<br>✗ 3+ characters in one scene<br>✗ Prompts over 80 words<br>✗ Fast hand gestures / finger counting<br>✗ Upload files without @ tags in prompt<br>✗ Use MultiFrames for Seedance 2.0 work</div>
+      <div style="font-size:0.68rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:#000000;border-bottom:1px solid #ddd;padding-bottom:0.25rem;margin-bottom:0.35rem;margin-top:0.45rem;">WHEN TO SWITCH MODELS</div>
+      <div class="label-body-alt">Need 4K native → Kling 3.0<br>Maximum photorealism → Veo 3.1<br>Advanced frame editing → Runway Gen-4.5<br>High volume / tight budget → Wan 2.6<br>Clips longer than 15s → Kling 3.0 (up to 3 min)</div>
+      <div style="font-size:0.68rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:#000000;border-bottom:1px solid #ddd;padding-bottom:0.25rem;margin-bottom:0.35rem;margin-top:0.45rem;">CHARACTER CONSISTENCY RULES</div>
+      <div class="label-body">✓ Use 2 reference images max, not 6<br>✓ Match lighting temp across all refs<br>✓ Include character anchor block in every prompt<br>✓ Slow movement protects facial identity<br>✓ Avoid fast hand gestures near face<br>✓ Wide shots hide finger artifacts</div>
+      <div style="font-size:0.68rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:#000000;border-bottom:1px solid #ddd;padding-bottom:0.25rem;margin-bottom:0.35rem;margin-top:0.45rem;">OFFICIAL PLATFORMS</div>
+      <div class="label-body">Dreamina: dreamina.capcut.com (free tier)<br>CapCut: capcut.com (integrated)<br>PiAPI: $0.13/sec standard · $0.10/sec fast<br>Atlas Cloud: from $0.022/sec<br>⚠ seedance2.ai / seedance.tv - NOT official</div>
+    </div>
+  </div>
+  <div style="margin-top:0.6rem;padding-top:0.45rem;border-top:1px solid #ddd;font-size:0.72rem;color:#000000;display:flex;justify-content:space-between;">
+    <span>jesiwicks.com/seedance · Full guide with prompts and workflow templates</span>
+    <span>Free resource · April 2026</span>
+  </div>
+</div>
+<script defer>
+'use strict';
+// ── Page navigation ──
+function toggleFaq(id){
+  var item=document.getElementById(id);
+  var btn=item.querySelector('.faq-q');
+  var isOpen=item.classList.contains('open');
+  document.querySelectorAll('.faq-item.open').forEach(function(el){
+    el.classList.remove('open');
+    el.querySelector('.faq-q').setAttribute('aria-expanded','false');
+  });
+  if(!isOpen){
+    item.classList.add('open');
+    btn.setAttribute('aria-expanded','true');
+  }
+}
+function showPage(id, btn) {
+  if (id !== 'sources') _prevPage = id;
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById('page-' + id).classList.add('active');
+  if (btn && btn.classList) btn.classList.add('active');
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+// ── Theme toggle ──
+function toggleTheme() {
+  const html = document.documentElement;
+  const icon = document.getElementById('theme-icon');
+  const label = document.getElementById('theme-label');
+  if (html.dataset.theme === 'dark') {
+    html.dataset.theme = 'light';
+    icon.textContent = '🌙';
+    label.textContent = 'Dark mode';
+  } else {
+    html.dataset.theme = 'dark';
+    icon.textContent = '☀️';
+    label.textContent = 'Light mode';
+  }
+}
+// ── Cheat sheet toggle ──
+function toggleCheat() {
+  const panel = document.getElementById('cheatPanel');
+  const btn = document.querySelector('.cheat-toggle');
+  const label = document.getElementById('cheatLabel');
+  const isOpen = panel.classList.contains('open');
+  panel.classList.toggle('open');
+  label.textContent = isOpen ? 'Cheat Sheet' : 'Close';
+  if (btn) btn.setAttribute('aria-expanded', String(!isOpen));
+}
+// ── Copy prompt ──
+function copyPrompt(btn) {
+  const text = btn.closest('.prompt-block').querySelector('.prompt-text').textContent.trim();
+  navigator.clipboard.writeText(text).then(() => {
+    btn.textContent = 'Copied!';
+    btn.classList.add('copied');
+    setTimeout(() => { btn.textContent = 'Copy'; btn.classList.remove('copied'); }, 2000);
+  });
+}
+// ── Sources back button - return to last viewed page ──
+let _prevPage = 'orient';
+const _origShowPage = showPage;
+// ── Print / PDF cheat sheet ──
+function printCheatsheet() {
+  const sheet = document.getElementById('printSheet');
+  sheet.style.display = 'block';
+  window.print();
+  sheet.style.display = 'none';
+}
+</script>
+</body>
+</html>
