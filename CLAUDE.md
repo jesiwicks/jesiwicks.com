@@ -138,16 +138,16 @@ When a new guide goes live, update the footer series row in ALL existing guide f
 
 ---
 
-## CLOUDFLARE ANALYTICS ISSUE (pending fix)
-**Problem:** Cache rate is only 7%. Cloudflare analytics shows 37k+ requests returning "empty" content type. This means Cloudflare is not caching HTML files properly.
+## CLOUDFLARE CACHING (resolved)
+The April 19 baseline showed a 7% edge cache rate with HTML responses returning empty content type. Fix shipped May 4, 2026 in commit `ae67f2d`, which added a `_headers` file setting `CDN-Cache-Control: public, max-age=3600, stale-while-revalidate=86400` on `/*` plus long-lived immutable caching on `/fonts/*` and 30-day caching on image extensions.
 
-**What needs to happen:** Read the `wrangler.toml` file in the repo, then add proper cache headers so Cloudflare caches HTML, fonts, and images at the edge. This will fix the 7% cache rate and reduce load times for international visitors.
-
-**Important:** Do NOT delete any files. Do NOT change any guide content. Only modify `wrangler.toml` or add a cache configuration. Show the proposed change before committing.
+Verified working May 19, 2026 via `curl -I https://jesiwicks.com/` and `curl -I https://jesiwicks.com/seedance/`: both responses returned `cf-cache-status: HIT` with `cdn-cache-control` present and matching the `_headers` declaration. Workers Static Assets is honoring `_headers` as expected.
 
 ---
 
-## CURRENT SITE PERFORMANCE (April 19, 2026)
+## CURRENT SITE PERFORMANCE (April 19, 2026 — pre-caching-fix snapshot)
+Caching figures below are from before the May 4 `_headers` fix. Edge cache rate has since been verified healthy (see Cloudflare Caching section). Other metrics may also be stale; re-check the Cloudflare dashboard for current numbers.
+
 - 45 countries in first week of full deployment
 - 41k requests, 881 visits, 1.22k page views
 - 100% encrypted traffic (SSL)
@@ -181,6 +181,5 @@ When a new guide goes live, update the footer series row in ALL existing guide f
 ---
 
 ## PENDING TASKS
-1. **Fix Cloudflare caching** — read wrangler.toml, add cache headers, commit
-2. **Enable Cloudflare Web Analytics** — adds page-level traffic data, currently only site-level analytics exist
-3. **Next guide** — Grok Imagine is the highest priority based on search interest and creator community activity
+1. **Enable Cloudflare Web Analytics** — adds page-level traffic data, currently only site-level analytics exist
+2. **Next guide** — Grok Imagine is the highest priority based on search interest and creator community activity
