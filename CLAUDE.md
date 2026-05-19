@@ -126,13 +126,12 @@ Each page has:
 ---
 
 ## FOOTER SERIES ROW
-Every guide has a footer with links to the other guides. Current state:
-- jesiwicks.com (home) — always active
-- jesiwicks.com/seedance — active link
-- jesiwicks.com/kling — active link
-- jesiwicks.com/veo3 — active link
-- Runway Gen-4.5 — coming soon (no link yet)
-- Wan 2.6 — coming soon (no link yet)
+Every guide has a footer series row. Order matches what's in the HTML, top to bottom:
+1. Seedance 2.0 — active link to `/seedance` (rendered as non-link pink span on the Seedance guide itself)
+2. Kling 3.0 — active link to `/kling` (non-link pink span on the Kling guide)
+3. Veo 3 — active link to `/veo3` (non-link pink span on the Veo 3 guide)
+4. Grok Imagine — coming soon (no link)
+5. Runway Gen-4.5 — coming soon (no link)
 
 When a new guide goes live, update the footer series row in ALL existing guide files.
 
