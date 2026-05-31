@@ -24,7 +24,7 @@ A free AI video guide series. Each guide is a single self-contained HTML file co
 | Kling 3.0 | jesiwicks.com/kling | /kling/index.html |
 | Veo 3 | jesiwicks.com/veo3 | /veo3/index.html |
 
-Coming soon: Grok Imagine, Runway Gen-4.5, Meta AI, Hailuo 02, Wan 2.6
+Coming soon: Grok Imagine (in progress), Google Omni
 
 ---
 
@@ -130,8 +130,8 @@ Every guide has a footer series row. Order matches what's in the HTML, top to bo
 1. Seedance 2.0 — active link to `/seedance` (rendered as non-link pink span on the Seedance guide itself)
 2. Kling 3.0 — active link to `/kling` (non-link pink span on the Kling guide)
 3. Veo 3 — active link to `/veo3` (non-link pink span on the Veo 3 guide)
-4. Grok Imagine — coming soon (no link)
-5. Runway Gen-4.5 — coming soon (no link)
+4. Grok Imagine — coming soon (no link); becomes active link to `/grok` when the Grok guide ships
+5. Google Omni — coming soon (no link)
 
 When a new guide goes live, update the footer series row in ALL existing guide files.
 
