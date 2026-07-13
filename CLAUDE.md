@@ -23,6 +23,9 @@ A free AI video guide series. Each guide is a single self-contained HTML file co
 | Seedance 2.0 | jesiwicks.com/seedance | /seedance/index.html |
 | Kling 3.0 | jesiwicks.com/kling | /kling/index.html |
 | Veo 3 | jesiwicks.com/veo3 | /veo3/index.html |
+| FFmpeg System Hub | jesiwicks.com/ffmpeg | /ffmpeg/index.html |
+
+Note: FFmpeg System Hub is deliberately NOT linked in the guide footer series rows or site nav. It is a standalone reference page reachable only by direct URL and the sitemap, so it does not appear in the footer series row and does not require footer updates to the other guides.
 
 Coming soon: Grok Imagine (in progress)
 
